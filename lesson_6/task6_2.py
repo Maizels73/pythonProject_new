@@ -8,5 +8,15 @@
     использовать формулу: длина*ширина*масса асфальта для покрытия одного кв. метра дороги асфальтом, толщиной в 1 см*число см толщины полотна;
     проверить работу метода.
 
-Например: 20 м*5000 м*25 кг*5 см = 12500 т.
+Например: 20(м)*5000(м)*25(кг)*5(с)м = 12500 т.
 """
+class Road:
+    def __init__(self, length, width):
+        self._length = length
+        self._width = width
+
+    def itogo(self, weight = 25, thickness = 5):
+        return f"{self._length}m * {self._length}m * {weight}kg * {thickness}sm = {int(self._length * self._width * weight * thickness / 1000)}t"
+
+my_road = Road(5000,20)
+print(my_road.itogo())
